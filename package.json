@@ -1,0 +1,17 @@
+{
+  "name": "restaurante-sabor-e-arte",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de restaurante com cardápio digital, pedidos online e painel administrativo",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n API,WEB -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "admin": "npm run admin --prefix server --",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": { "concurrently": "^9.0.0" }
+}
